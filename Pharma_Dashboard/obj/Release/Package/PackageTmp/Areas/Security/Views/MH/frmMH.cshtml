@@ -1,0 +1,123 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Areas/Security/NgCode/frmMH.js"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div class="form-horizontal" ng-form="frmMH">
+        <!-- Content Header (Page header) -->
+        @*<section class="content-header">
+                <h1>
+                    {{FormTitle}}
+
+                </h1>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li class="active">{{FormTitle}}</li>
+                </ol>
+            </section>*@
+        <!-- Main content -->
+        <section class="content">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements disabled -->
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            @* <h3 class="box-title">{{FormTitle}}</h3>*@
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <h2 class="box-title">
+                                        <strong>{{FormTitle}}</strong>
+                                    </h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="text-right  m-t-10">
+                                        <button type="button" class="btn btn-embossed btn-primary" ng-click="SaveData()" ng-class="{'btn-transparent': frmMH.$invalid}" ng-disabled="frmMH.$invalid"><i class="fa fa-save"></i>&nbsp{{btnSaveValue}}</button>
+                                        <button type="button" class="btn btn-embossed btn-danger" ng-click="Reset()"><i class="fa fa-refresh"></i>&nbsp Reset</button>
+                                        <button type="button" class="btn btn-embossed btn-success" ng-click="GetHeadMenuList()"><i class="fa fa-search"></i>&nbspSearch</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <form role="form">
+                                <!-- text input -->
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label>Menu Head Name</label>
+                                            <input type="text" id="Name" ng-model="Name" name="Name" ng-maxlength="50" class="form-control" required placeholder="Enter ...">
+                                            <input type="hidden" ng-model="uiID" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label>Sequence</label>
+                                            <input type="text" id="Sequence" name="Sequence" ng-model="Sequence" ng-maxlength="10" class="form-control" placeholder="Enter ..." required>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                @*<div class="box-footer">
+                                        <button type="submit" class="btn btn-primary">{{btnSaveValue}}</button>
+                                        <button type="submit" class="btn btn-danger">Reset</button>
+                                        <button type="submit" class="btn btn-success">Search</button>
+                                    </div>*@
+                            </form>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+    @*<div class="modal modal-primary fade" id="test" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="panel-content bg-light-blue">
+                    <div class="modal-header">
+                        <h2 class="panel-title">Menu List</h2>
+                        <button type="button" id="modalClose" class="close" data-dismiss="modal" aria-hidden="true"><i class="icons-office-52"></i></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div id="gridMH" ui-grid="gridMHOptions" class="grid" style="padding-left: 1%; height: 350px; width: 98.6%;" ui-grid-auto-resize ui-grid-resize-columns></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+    <div class="modal fade" id="test">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Menu List</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div id="gridMH" ui-grid="gridMHOptions" class="grid" style="height: 350px; width: 100%;" ui-grid-auto-resize ui-grid-resize-columns></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                   @* <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>*@
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</div>
+

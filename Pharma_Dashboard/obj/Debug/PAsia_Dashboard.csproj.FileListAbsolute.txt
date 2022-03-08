@@ -1,0 +1,202 @@
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\ApplicationInsights.config
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csc.exe
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csc.exe.config
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csc.rsp
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csi.exe
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csi.rsp
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.AppContext.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\vbc.exe
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\vbc.exe.config
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\vbc.rsp
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\VBCSCompiler.exe
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\PAsia_Dashboard.dll.config
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\PAsia_Dashboard.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\PAsia_Dashboard.pdb
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Antlr3.Runtime.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.Web.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.ApplicationInsights.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Newtonsoft.Json.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Helpers.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Mvc.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Optimization.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Razor.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.Deployment.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.Razor.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\WebGrease.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Helpers.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Mvc.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Optimization.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Razor.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.Deployment.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.Razor.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Antlr3.Runtime.pdb
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Newtonsoft.Json.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.ApplicationInsights.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.Web.xml
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.dll
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.pdb
+C:\Users\maaz\documents\visual studio 2017\Projects\PAsia_Dashboard\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.csprojResolveAssemblyReference.cache
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\ApplicationInsights.config
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csc.exe
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csc.exe.config
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csc.rsp
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csi.exe
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\csi.rsp
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.AppContext.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.Collections.Immutable.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.IO.FileSystem.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\System.Reflection.Metadata.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\vbc.exe
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\vbc.exe.config
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\vbc.rsp
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\VBCSCompiler.exe
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\roslyn\VBCSCompiler.exe.config
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\PAsia_Dashboard.dll.config
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\PAsia_Dashboard.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\PAsia_Dashboard.pdb
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Antlr3.Runtime.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.Agent.Intercept.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.DependencyCollector.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.Web.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.WindowsServer.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.ApplicationInsights.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.Web.Infrastructure.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Newtonsoft.Json.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Helpers.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Mvc.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Optimization.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Razor.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.Deployment.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.Razor.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\WebGrease.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Helpers.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Mvc.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Optimization.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.Razor.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.Deployment.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\System.Web.WebPages.Razor.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Antlr3.Runtime.pdb
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Newtonsoft.Json.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.ApplicationInsights.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.DependencyCollector.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.WindowsServer.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\bin\Microsoft.AI.Web.xml
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.dll
+E:\PharmaASIA\PharmaAsia_Running\PAsia_Dashboard\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.pdb
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\ApplicationInsights.config
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\csc.exe
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\csc.exe.config
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\csc.rsp
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\csi.exe
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\csi.rsp
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\System.AppContext.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\System.Collections.Immutable.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\System.IO.FileSystem.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\System.Reflection.Metadata.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\vbc.exe
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\vbc.exe.config
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\vbc.rsp
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\VBCSCompiler.exe
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\roslyn\VBCSCompiler.exe.config
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\PAsia_Dashboard.dll.config
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\PAsia_Dashboard.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\PAsia_Dashboard.pdb
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Antlr3.Runtime.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.Agent.Intercept.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.DependencyCollector.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.Web.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.WindowsServer.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.ApplicationInsights.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.Web.Infrastructure.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Newtonsoft.Json.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.Helpers.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.Mvc.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.Optimization.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.Razor.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.WebPages.Deployment.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.WebPages.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.WebPages.Razor.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\WebGrease.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.Helpers.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.Mvc.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.Optimization.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.Razor.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.WebPages.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.WebPages.Deployment.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\System.Web.WebPages.Razor.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Antlr3.Runtime.pdb
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Newtonsoft.Json.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.ApplicationInsights.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.DependencyCollector.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.WindowsServer.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\bin\Microsoft.AI.Web.xml
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.csproj.CoreCompileInputs.cache
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.csproj.CopyComplete
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.dll
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.pdb
+E:\PharmaASIA\PAsia_TFS\PAsia_Dashboard\obj\Debug\PAsia_Dashboard.csprojAssemblyReference.cache

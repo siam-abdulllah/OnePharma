@@ -1,0 +1,109 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Areas/Security/NgCode/frmMnConf.js"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div class="form-horizontal" ng-form="frmMN">
+        <section class="content">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements disabled -->
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            @* <h3 class="box-title">{{FormTitle}}</h3>*@
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <h2 class="box-title">
+                                        <strong>{{FormTitle}}</strong>
+                                    </h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="text-right  m-t-10">
+                                        <button type="button" class="btn btn-embossed btn-primary" ng-click="SaveData()" ng-class="{'btn-transparent': frmMN.$invalid}" ng-disabled="frmMN.$invalid"><i class="fa fa-save"></i>&nbsp{{btnSaveValue}}</button>
+                                        <button type="button" class="btn btn-embossed btn-danger" ng-click="Reset()"><i class="fa fa-refresh"></i>&nbsp Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <form role="form">
+                                <!-- text input -->
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label class="control-label required">Role Code</label>
+                                            <select class="form-control" id="RL_ID" ng-model="RL_ID" data-ng-options="c.ID as c.Name for c in RLListCombo" ng-change="OnRoleClick()" required>
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                            <input type="hidden" id="uiID" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label class="control-label required">Menu Head</label>
+                                            <select class="form-control" id="MH_ID" ng-model="MH_ID" data-ng-options="c.ID as c.Name for c in MHListCombo" ng-change="GetSubMenuList()" required>
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label class="control-label required">Sub Menu</label>
+                                            <select class="form-control" id="SM_ID" ng-model="SM_ID" data-ng-options="c.ID as c.Name for c in SMListCombo" ng-change="SubMenuChange()" required>
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label class="control-label required">Save</label>
+                                            <select class="form-control" id="Sv" ng-init="Sv='No'" ng-model="Sv" required>
+                                                @*<option value="">-- Please Select --</option>*@
+                                                <option value="Yes">Yes</option>
+                                                <option value="No" selected="">No</option>
+
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label class="control-label required">Search</label>
+                                            <select class="form-control" id="Dl" ng-init="Dl='No'" checked ng-model="Dl" required>
+                                                @* <option value="">-- Please Select --</option>*@
+                                                <option value="Yes">Yes</option>
+                                                <option value="No" selected="">No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                    <div class="row">
+                        <div id="gridMNConf" ui-grid="gridMNConfOptions" class="grid" style=" height: 250px; width: 100%;" ui-grid-auto-resize ui-grid-resize-columns></div>
+                    </div>
+                </div>
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+
+        </section>
+        <!-- /.content -->
+    </div>
+</div>
+

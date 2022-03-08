@@ -1,0 +1,241 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+</style>
+<script src="~/Areas/FSM/NgCode/frmHonorariumDoctorDataUpload.js"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div class="loader ng-cloak LoaderStyle" data-loading>
+        @*<img src="~/Content/img/avatar.png" width="100px;" height="100px;" style="top: 50%; left: 50%;" />*@
+        <img src="~/Content/img/loader.gif" width="100px;" height="100px;" style="top: 50%; left: 50%;" />
+    </div>
+    <div class="form-horizontal" ng-form="frmHonorariumDoctorDataUpload">
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            @* <h3 class="box-title">{{FormTitle}}</h3>*@
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <h2 class="box-title">
+                                        <strong ng-cloak>{{FormTitle}}</strong>
+                                    </h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="text-right  m-t-10">
+                                        <button type="button" class="btn btn-embossed btn-primary" ng-click="SaveData()" ng-class="{'btn-transparent': frmHonorariumDoctorDataUpload.$invalid}" ng-disabled="frmHonorariumDoctorDataUpload.$invalid"><i class="fa fa-save"></i>&nbsp Save</button>
+                                        <button type="button" class="btn btn-embossed btn-danger" ng-click="Reset()"><i class="fa fa-refresh"></i>&nbsp Reset</button>
+                                        <button type="button" class="btn btn-embossed btn-success" ng-click="GetDoctorGridData()"><i class="fa fa-search"></i>&nbspView</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label">Depot</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <ui-select class="form-control form-white " ng-model="frmHonorariumDoctorDataUpload.Depot" theme="select2" ng-change="GetZoneByDepot()" ng-cloak>
+                                                <ui-select-match placeholder="">{{$select.selected.DEPOT_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="depot.DEPOT_CODE as depot in Depots | propsFilter: {DEPOT_NAME: $select.search, DEPOT_CODE: $select.search}">
+                                                    <div ng-bind-html="depot.DEPOT_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label">Area</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <ui-select class="form-control form-white " ng-model="frmHonorariumDoctorDataUpload.Area" theme="select2" ng-change="GetTerritoryByArea()" ng-cloak>
+                                                <ui-select-match placeholder="">{{$select.selected.AREA_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="area.AREA_CODE as area in Areas | propsFilter: {AREA_NAME: $select.search, AREA_CODE: $select.search}">
+                                                    <div ng-bind-html="area.AREA_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label">Zone</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+
+                                            <ui-select class="form-control form-white " ng-model="frmHonorariumDoctorDataUpload.Zone" theme="select2" ng-change="GetRegionByZone()" ng-cloak>
+                                                <ui-select-match placeholder="">{{$select.selected.ZONE_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="zone.ZONE_CODE as zone in Zones | propsFilter: {ZONE_NAME: $select.search, ZONE_CODE: $select.search}">
+                                                    <div ng-bind-html="zone.ZONE_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label">Territory</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+
+                                            <ui-select class="form-control form-white " ng-model="frmHonorariumDoctorDataUpload.Territory" theme="select2" ng-cloak>
+                                                <ui-select-match placeholder="">{{$select.selected.TERRITORY_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="territory.TERRITORY_CODE as territory in Territories | propsFilter: {TERRITORY_NAME: $select.search, TERRITORY_CODE: $select.search}">
+                                                    <div ng-bind-html="territory.TERRITORY_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label ">Region</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+
+                                            <ui-select class="form-control form-white " ng-model="frmHonorariumDoctorDataUpload.Region" theme="select2" ng-change="GetAreaByRegion()" ng-cloak>
+                                                <ui-select-match placeholder="">{{$select.selected.REGION_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="region.REGION_CODE as region in Regions | propsFilter: {REGION_NAME: $select.search, REGION_CODE: $select.search}">
+                                                    <div ng-bind-html="region.REGION_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="file" class="form-control form-white file" id="DocFile" ng-model="DocFile" onchange="angular.element(this).scope().UploadDocument()">
+
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="gridHonorariumDoctorDataUploadValue" ui-grid="gridHonorariumDoctorDataUploadOptionsValue" class="grid" style="height: 320px; width: 100%;" ui-grid-auto-resize ui-grid-resize-columns ui-grid-grouping ui-grid-exporter ui-grid-pinning></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal fade" id="honorariumDocModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Doctor Information</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="form-horizontal" ng-form="frmHonDoc">
+                            <fieldset>
+                                <legend>Honorarium Doctor Information</legend>
+                                <div class="form-group">
+
+                                    <div class="col-md-3">
+                                        <label class="control-label  input-sm required">Doctor Code</label>
+                                    </div>
+                                    <div class="col-md-3" ng-class="{'has-error':frmHonDoc.DoctorCodeModal.$error.maxlength}">
+                                        <input type="text" class="form-control form-white input-sm" name="DoctorCodeModal" ng-maxlength="200" id="DoctorCodeModal" ng-model="DoctorCodeModal" required readonly="">
+                                        <input type="hidden" class="form-control form-white input-sm" name="SlNoModal" id="SlNoModal" ng-model="SlNoModal" required readonly="">
+                                    </div> <div class="col-md-3">
+                                        <label class="control-label  input-sm ">Doctor Name</label>
+                                    </div>
+                                    <div class="col-md-3" ng-class="{'has-error':frmHonDoc.DoctorNameModal.$error.maxlength}">
+                                        <input type="text" class="form-control form-white input-sm" name="DoctorNameModal" ng-maxlength="200" id="DoctorNameModal" ng-model="DoctorNameModal">
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label class="control-label  input-sm required">Practicing Day</label>
+                                    </div>
+                                    <div class="col-md-3" ng-class="{'has-error':frmHonDoc.PracticingDayModal.$error.maxlength}">
+                                        <input type="text" class="form-control form-white input-sm" name="PracticingDayModal" ng-maxlength="200" id="PracticingDayModal" ng-model="PracticingDayModal" required>
+
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="control-label  input-sm required">Prescription Per Day </label>
+                                    </div>
+                                    <div class="col-md-3" ng-class="{'has-error':frmHonDoc.PrescriptionPerDayModal.$error.maxlength}">
+                                        <input type="text" class="form-control form-white input-sm" name="PrescriptionPerDayModal" ng-maxlength="200" id="PrescriptionPerDayModal" ng-model="PrescriptionPerDayModal" required>
+
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label class="control-label  input-sm required">Honorarium Amount</label>
+                                    </div>
+                                    <div class="col-md-3" ng-class="{'has-error':frmHonDoc.HonorariumAmountModal.$error.maxlength}">
+                                        <input type="text" class="form-control form-white input-sm" name="HonorariumAmountModal" ng-maxlength="200" id="HonorariumAmountModal" ng-model="HonorariumAmountModal" required>
+
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="control-label  input-sm required">Territory Code 4P</label>
+                                    </div>
+                                    <div class="col-md-3" ng-class="{'has-error':frmHonDoc.TerritoryCode4PModal.$error.maxlength}">
+                                        <input type="text" class="form-control form-white input-sm" name="TerritoryCode4PModal" ng-maxlength="200" id="TerritoryCode4PModal" ng-model="TerritoryCode4PModal" required>
+
+                                    </div>
+                                </div>
+                                <div class="form-group" style="visibility: hidden">
+                                    <div class="col-md-3">
+                                        <label class="control-label  input-sm ">Set Date</label>
+                                    </div>
+                                    <div class="col-md-3" ng-class="{'has-error':frmHonDoc.SetDateModal.$error.maxlength}">
+                                        <input type="text" class="form-control form-white input-sm" name="SetDateModal" ng-maxlength="200" id="SetDateModal" ng-model="SetDateModal" readonly="">
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="col-md-3">
+                                    &nbsp;
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-4">
+                                        @*<input type="button" class="btn btn-embossed btn-primary btn-rounded btn-sm"  ng-click="addItemGridExistingProductOptions()" ng-class="{'btn-transparent': frmHonDoc.$invalid}" ng-disabled="frmHonDoc.$invalid" ng-hide="ViewPerm == 'NO'" />*@
+                                        <button class="btn btn-sm btn-success " ng-click="addItemGrid()" ng-class="{'btn-transparent': frmHonDoc.$invalid}" ng-disabled="frmHonDoc.$invalid" ng-hide="ViewPerm == 'NO'"><i class="fa fa-plus"></i>&nbspAdd Data</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    @* <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>*@
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+</div>
+
+
+

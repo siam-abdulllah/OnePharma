@@ -1,0 +1,234 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+</style>
+<script src="~/Areas/FSM/NgCode/frmReportMPOWisePrescription.js"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div class="loader ng-cloak LoaderStyle" data-loading>
+        @*<img src="~/Content/img/avatar.png" width="100px;" height="100px;" style="top: 50%; left: 50%;" />*@
+        <img src="~/Content/img/loader.gif" width="100px;" height="100px;" style="top: 50%; left: 50%;" />
+    </div>
+    <div class="form-horizontal" ng-form="frmReportMPOWisePrescription">
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            @* <h3 class="box-title">{{FormTitle}}</h3>*@
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <h2 class="box-title">
+                                        <strong>{{FormTitle}}</strong>
+                                    </h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="text-right  m-t-10">
+                                        @*<button type="button" class="btn btn-embossed btn-primary" ng-click="SaveData()" ng-class="{'btn-transparent': frmReportMPOWisePrescription.$invalid}" ng-disabled="frmReportMPOWisePrescription.$invalid"><i class="fa fa-save"></i>&nbsp Save</button>*@
+                                        <button type="button" class="btn btn-embossed btn-danger" ng-click="Reset()"><i class="fa fa-refresh"></i>&nbsp Reset</button>
+                                        <button type="button" class="btn btn-embossed btn-success" ng-click="GetMPOWisePrescriptionData()"><i class="fa fa-search"></i>&nbspView</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label">Depot</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+
+                                            <ui-select class="form-control form-white " ng-model="frmReportMPOWisePrescription.Depot" theme="select2" ng-change="GetZoneByDepot()">
+                                                <ui-select-match placeholder="">{{$select.selected.DEPOT_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="depot.DEPOT_CODE as depot in Depots | propsFilter: {DEPOT_NAME: $select.search, DEPOT_CODE: $select.search}">
+                                                    <div ng-bind-html="depot.DEPOT_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label">Area</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+
+                                            <ui-select class="form-control form-white " ng-model="frmReportMPOWisePrescription.Area" theme="select2" ng-change="GetTerritoryByArea()">
+                                                <ui-select-match placeholder="">{{$select.selected.AREA_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="area.AREA_CODE as area in Areas | propsFilter: {AREA_NAME: $select.search, AREA_CODE: $select.search}">
+                                                    <div ng-bind-html="area.AREA_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label">Zone</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+
+                                            <ui-select class="form-control form-white " ng-model="frmReportMPOWisePrescription.Zone" theme="select2" ng-change="GetRegionByZone()">
+                                                <ui-select-match placeholder="">{{$select.selected.ZONE_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="zone.ZONE_CODE as zone in Zones | propsFilter: {ZONE_NAME: $select.search, ZONE_CODE: $select.search}">
+                                                    <div ng-bind-html="zone.ZONE_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label">Territory</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+
+                                            <ui-select class="form-control form-white " ng-model="frmReportMPOWisePrescription.Territory" theme="select2">
+                                                <ui-select-match placeholder="">{{$select.selected.TERRITORY_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="territory.TERRITORY_CODE as territory in Territories | propsFilter: {TERRITORY_NAME: $select.search, TERRITORY_CODE: $select.search}">
+                                                    <div ng-bind-html="territory.TERRITORY_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label ">Region</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+
+                                            <ui-select class="form-control form-white " ng-model="frmReportMPOWisePrescription.Region" theme="select2" ng-change="GetAreaByRegion()">
+                                                <ui-select-match placeholder="">{{$select.selected.REGION_NAME}}</ui-select-match>
+                                                <ui-select-choices repeat="region.REGION_CODE as region in Regions | propsFilter: {REGION_NAME: $select.search, REGION_CODE: $select.search}">
+                                                    <div ng-bind-html="region.REGION_NAME | highlight: $select.search"></div>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    @*<div class="col-md-1" style="padding: 0;">
+                                            <label class="control-label">Date(From-To):</label>
+                                        </div>*@
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+
+                                            <div class="col-md-4" style="padding: 0;">
+
+                                                <label class="control-label">Date(From-To):</label>
+
+                                            </div>
+                                            <div class="col-md-4" style="padding: 0;">
+
+
+                                                <div class="input-group date">
+                                                    <input type="text" class="form-control pull-right datepicker clickable" ng-model="FromDate" required readonly>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4" style="padding: 0;">
+
+                                                <div class="input-group date">
+                                                    <input type="text" class="form-control pull-right datepicker clickable" ng-model="ToDate" required readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="gridReportMPOWisePrescriptionValue" ui-grid="gridReportMPOWisePrescription" class="grid" style="height: 320px; width: 100%;" ui-grid-auto-resize ui-grid-resize-columns ui-grid-grouping ui-grid-exporter></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal fade" id="showImageModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Prescription Information</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div><div class="col-md-6">
+                            @*<img width="400px" src="{{prescriptionImageSRC}} " id="prescriptionImg" />*@
+
+                            <div id="prescriptionImg" style="width: 600px; height:400px;"></div>
+                        </div><div class="col-md-3">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    @* <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>*@
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.datepicker').datepicker({
+            todayBtn: "linked",
+            autoclose: true,
+            todayHighlight: true,
+            format: 'dd-mm-yyyy',
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+    //function ZoomIn() {
+    //    alert($("#prescriptionImg").width());
+    //    $('#prescriptionImg').width($("#prescriptionImg").width() + 100);
+    //    $('#prescriptionImg').height($("#prescriptionImg").height() + 100);
+    //};
+    //function ZoomOut() {
+    //    $('#prescriptionImg').width($("#prescriptionImg").width() - 100);
+    //    $('#prescriptionImg').height($("#prescriptionImg").height() - 100);
+    //};
+    //var delta = 90;
+    //function rotateBy10Deg() {
+    //    var ele = document.getElementById("prescriptionImg");
+
+    //    ele.style.webkitTransform = "rotate(" + delta + "deg)";
+    //    delta += 90;
+    //}
+
+    $(".modal-content").draggable({ disabled: true });
+    //function rotateImage(degree) {
+    //    $('#prescriptionImg').animate({ transform: degree }, {
+    //        step: function (now, fx) {
+    //            $(this).css({
+    //                '-webkit-transform': 'rotate(' + now + 'deg)',
+    //                '-moz-transform': 'rotate(' + now + 'deg)',
+    //                'transform': 'rotate(' + now + 'deg)'
+    //            });
+    //        }
+    //    });
+    //}
+
+</script>
+

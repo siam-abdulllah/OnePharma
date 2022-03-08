@@ -1,0 +1,85 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Areas/Security/NgCode/frmRL.js"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div class="form-horizontal" ng-form="frmRL">
+        <section class="content">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements disabled -->
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            @* <h3 class="box-title">{{FormTitle}}</h3>*@
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <h2 class="box-title">
+                                        <strong>{{FormTitle}}</strong>
+                                    </h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="text-right  m-t-10">
+                                        <button type="button" class="btn btn-embossed btn-primary" ng-click="SaveData()" ng-class="{'btn-transparent': frmRL.$invalid}" ng-disabled="frmRL.$invalid"><i class="fa fa-save"></i>&nbsp{{btnSaveValue}}</button>
+                                        <button type="button" class="btn btn-embossed btn-danger" ng-click="Reset()"><i class="fa fa-refresh"></i>&nbsp Reset</button>
+                                        <button type="button" class="btn btn-embossed btn-success" ng-click="GetRoleInfoList()"><i class="fa fa-search"></i>&nbspSearch</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <form role="form">
+                                <!-- text input -->
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label class="control-label">Role Code</label>
+                                            <input type="text" class="form-control" id="uiCode" placeholder="Auto Generated" ng-model="uiCode" disabled="disabled">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-group">
+                                            <label class="control-label required">Role Name</label>
+                                            <input type="text" class="form-control" id="RoleName" placeholder="Role Name" name="RoleName" ng-maxlength="50" ng-model="RoleName" required>
+                                            <input type="hidden" ng-model="uiID" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </form>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!--/.col (right) -->
+            </div>
+            <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+    
+    <div class="modal fade" id="test">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Role List</h3>
+                    <button type="button" id="modalClose" class="close clll" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div id="gridMH" ui-grid="gridRoleOptions" class="grid" style="height: 350px; width: 98.6%;" ui-grid-auto-resize ui-grid-resize-columns></div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+</div>
+

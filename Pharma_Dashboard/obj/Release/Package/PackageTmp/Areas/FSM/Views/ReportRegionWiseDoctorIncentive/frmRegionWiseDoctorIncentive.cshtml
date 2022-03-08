@@ -1,0 +1,72 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+</style>
+<script src="~/Areas/FSM/NgCode/frmReportRegionWiseDoctorIncentive.js"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div class="loader ng-cloak LoaderStyle" data-loading>
+        @*<img src="~/Content/img/avatar.png" width="100px;" height="100px;" style="top: 50%; left: 50%;" />*@
+        <img src="~/Content/img/loader.gif" width="100px;" height="100px;" style="top: 50%; left: 50%;" />
+    </div>
+    <div class="form-horizontal" ng-form="frmReportRegionWiseDoctorIncentive">
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <h4 class="box-title">
+                                        <strong ng-cloak>{{FormTitle}}</strong>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <form role="form">
+                                <div class="form-group  report">
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label required ">From</label>
+                                    </div>
+                                    <div class="col-md-2 input-group date">
+                                        <input type="text" class="form-control pull-right datepicker clickable" ng-model="FromDate" readonly required="">
+                                    </div>
+                                    <div class="col-md-1">
+                                        <label class="control-label required">To</label>
+                                    </div>
+                                    <div class="col-md-2 input-group date">
+                                        <input type="text" class="form-control pull-right datepicker clickable" ng-model="ToDate" readonly required="">
+                                    </div>
+                                    <div class="col-md-4" style="padding-top: 3px;">
+
+                                        <button type="button" class="btn btn-embossed btn-success" ng-click="GetRegionWiseDoctorIncentiveData()" ng-class="{'btn-transparent': frmReportRegionWiseDoctorIncentive.$invalid || isDisabled}" ng-disabled="frmReportRegionWiseDoctorIncentive.$invalid || isDisabled"><i class="fa fa-search"></i>Search</button>
+                                        <button type="button" class="btn btn-embossed btn-danger" ng-click="Reset()"><i class="fa fa-refresh"></i>&nbsp Reset</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="gridReportRegionWiseDoctorIncentiveValue" ui-grid="gridReportRegionWiseDoctorIncentive" class="grid" style="height: 320px; width: 100%;" ui-grid-auto-resize ui-grid-resize-columns ui-grid-grouping ui-grid-exporter ui-grid-pinning></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.datepicker').datepicker({
+            todayBtn: "linked",
+            autoclose: true,
+            todayHighlight: true,
+            format: 'dd-mm-yyyy',
+            changeMonth: true,
+            changeYear: true
+        });
+    });
+</script>
+

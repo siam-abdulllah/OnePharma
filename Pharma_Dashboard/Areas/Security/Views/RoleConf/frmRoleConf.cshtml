@@ -1,0 +1,68 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Areas/Security/NgCode/frmRoleConf.js"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div class="form-horizontal" ng-form="frmRoleConf">
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <h2 class="box-title">
+                                        <strong>{{FormTitle}}</strong>
+                                    </h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="text-right  m-t-10">
+                                        <button type="button" class="btn btn-embossed btn-primary" ng-click="SaveData()" ng-class="{'btn-transparent': frmRoleConf.$invalid}" ng-disabled="frmRoleConf.$invalid"><i class="fa fa-save"></i>&nbsp{{btnSaveValue}}</button>
+                                        <button type="button" class="btn btn-embossed btn-danger" ng-click="Reset()"><i class="fa fa-refresh"></i>&nbsp Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <form role="form">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <label class="control-label required">Role Name</label>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <select class="form-control form-white" id="RL_ID" ng-model="RL_ID" data-ng-options="c.ID as c.Name for c in RLListCombo" ng-change="GetEmployeeByRoleList()" required>
+                                                <option value="">-- Please Select --</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-md-3">
+                                            <label class="control-label required">Employee Name</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ui-select class="form-control form-white " ng-model="frmRoleConf.USER_ID" theme="select2" required>
+                                                <ui-select-match placeholder="-- Please Select --">{{$select.selected.EmployeeName}}</ui-select-match>
+                                                <ui-select-choices repeat="employee.UserID as employee in Employees | propsFilter: {EmployeeName: $select.search, EmployeeCode: $select.search, DesignationDetail: $select.search}">
+                                                    <div ng-bind-html="employee.EmployeeName | highlight: $select.search"></div>
+                                                    <small>
+                                                        <b>Employee Code: </b><span ng-bind-html="''+employee.EmployeeCode | highlight: $select.search"></span>  &nbsp;&nbsp;&nbsp;
+                                                        <b>Designation: </b><span ng-bind-html="''+employee.DesignationDetail | highlight: $select.search"></span>
+                                                    </small>
+                                                </ui-select-choices>
+                                            </ui-select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="gridRLConf" ui-grid="gridRLConfOptions" class="grid" style="height: 350px; width: 100%;" ui-grid-auto-resize ui-grid-resize-columns></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+

@@ -1,0 +1,71 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Areas/Security/NgCode/frmChngPass.js"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div class="form-horizontal" ng-form="frmChngPass">
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <h2 class="box-title">
+                                        <strong>Change Password</strong>
+                                    </h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="text-right  m-t-10">
+                                        <button type="button" class="btn btn-embossed btn-primary" ng-click="SaveData()" ng-class="{'btn-transparent': frmChngPass.$invalid||passwordValidation}" ng-disabled="frmChngPass.$invalid||passwordValidation"><i class="fa fa-save"></i>&nbsp{{btnSaveValue}}</button>
+                                        <button type="button" class="btn btn-embossed btn-danger" ng-click="Reset()"><i class="fa fa-refresh"></i>&nbsp Reset</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label class="control-label required">User Name</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control" id="Username" value="@Session["USER_NAME"].ToString()" placeholder="Username" required readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label class="control-label required">Current Password</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="password" class="form-control" id="CurrentPassword" ng-keyup="CheckCurrentPassword()" ng-model="CurrentPassword" placeholder="Type Current Password" autocomplete="new-password" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p class="label label-danger" ng-show="CrntPassChq">Wrong Password</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <label class="control-label required">New Password</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="password" class="form-control" id="Password" ng-keyup="CheckPasswordValidity()" ng-model="Password" ng-class="{'form-white':validateCurrentPassword}" ng-disabled="passwordDisabled" placeholder="Type Password" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="password" class="form-control" id="RePassword" ng-keyup="CheckPasswordValidity()" ng-model="RePassword" ng-class="{'form-white':validateCurrentPassword}" ng-disabled="passwordDisabled" placeholder="Re-type Password" required>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <p class="label label-danger" ng-show="Password != RePassword">Not Matched</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
