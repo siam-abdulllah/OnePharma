@@ -43,6 +43,31 @@ namespace PAsia_Dashboard.Areas.Security.Models.BEL
         public string AccessLevel { get; set; }
         public string EmployeeCode { get; set; }
         public string GroupCode { get; set; }
+        public string Code { get; set; }
+        public string DepotCode { get; set; }
+        public string Status { get; set; }
+        public int UserId { get; set; }
+
 
     }
+
+    public class UserEmployeeInfo
+    {
+        public string EmployeeCode { get; set; }
+        public string EmployeeName { get; set; }
+        public string DesignationCode { get; set; }
+        public string DesignationDetail { get; set; }
+        public string PostingLocation { get; set; }
+        public string DepotCode { get; set; }
+
+        // public string Username { get; set; }
+        public int UserId { get; set; }
+        public string Password { get; set; }
+        public string Status { get; set; }
+        public string GroupCode { get; set; }
+        public string AccessLevel { get; set; }
+        // public string Code { get; set; }
+
+    }
+
 }

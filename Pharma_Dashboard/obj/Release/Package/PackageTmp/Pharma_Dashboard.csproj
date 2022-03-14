@@ -236,6 +236,8 @@
     <Compile Include="Areas\Security\Controllers\RLController.cs" />
     <Compile Include="Areas\Security\Controllers\RoleConfController.cs" />
     <Compile Include="Areas\Security\Controllers\SMController.cs" />
+    <Compile Include="Areas\Security\Controllers\UserCreationController.cs" />
+    <Compile Include="Areas\Security\Controllers\UserCreationOPAController.cs" />
     <Compile Include="Areas\Security\DAO\AuditTrailDAO.cs" />
     <Compile Include="Areas\Security\DAO\ChngPassDAO.cs" />
     <Compile Include="Areas\Security\DAO\MHDAO.cs" />
@@ -243,6 +245,8 @@
     <Compile Include="Areas\Security\DAO\RLDAO.cs" />
     <Compile Include="Areas\Security\DAO\RoleConfDAO.cs" />
     <Compile Include="Areas\Security\DAO\SMDAO.cs" />
+    <Compile Include="Areas\Security\DAO\UserCreationDAO.cs" />
+    <Compile Include="Areas\Security\DAO\UserCreationOPADAO.cs" />
     <Compile Include="Areas\Security\DAO\UserLogInDAO.cs" />
     <Compile Include="Areas\Security\Models\BEL\AuditTrail.cs" />
     <Compile Include="Areas\Security\Models\BEL\Default.cs" />
@@ -301,6 +305,8 @@
     <Content Include="Areas\Security\NgCode\frmRoleConf.js" />
     <Content Include="Areas\Security\NgCode\frmRptAuditTrail.js" />
     <Content Include="Areas\Security\NgCode\frmSM.js" />
+    <Content Include="Areas\Security\NgCode\frmUserCreation.js" />
+    <Content Include="Areas\Security\NgCode\frmUserCreationOPA.js" />
     <Content Include="Content\AngularModules\10.gif" />
     <Content Include="Content\AngularModules\angular-animate.js" />
     <Content Include="Content\AngularModules\angular-mocks.js" />
@@ -374,6 +380,8 @@
     <Content Include="Areas\Reports\Views\RSMWiseSalesAchievementAnimal\frmRSMWiseSalesAchievementAnimal.cshtml" />
     <Content Include="Areas\Reports\Views\MPOWiseSalesAchievementAnimal\frmMPOWiseSalesValueAchievementAnimal.cshtml" />
     <Content Include="Areas\Reports\Views\AMWiseSalesAchievementAnimal\frmAMWiseSalesValueAchievementAnimal.cshtml" />
+    <Content Include="Areas\Security\Views\UserCreation\frmUserCreation.cshtml" />
+    <Content Include="Areas\Security\Views\UserCreationOPA\frmUserCreationOPA.cshtml" />
     <None Include="Content\AngularModules\_references.js" />
     <Content Include="Content\bootstrap-datepicker\.gitignore" />
     <Content Include="Content\bootstrap-datepicker\dist\css\bootstrap-datepicker.css" />
@@ -2851,6 +2859,7 @@
     <Content Include="Content\chart.js\README.md" />
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\OnePharma.pubxml" />
     <None Include="Properties\PublishProfiles\PASIA.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

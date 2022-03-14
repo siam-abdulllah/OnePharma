@@ -18,5 +18,8 @@ namespace PAsia_Dashboard.Areas.Security.Models.BEL
         public string EmployeeName { get; set; }
         public string DesignationCode { get; set; }
         public string DesignationDetail { get; set; }
+        public string GroupCode { get; set; }
+        public string DepotCode { get; internal set; }
+        public string PostingLocation { get; internal set; }
     }
 }

@@ -1,0 +1,178 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    .is-invalid {
+        border: 1px solid red !important;
+    }
+
+    .invalid-feedback {
+        font-weight: 600;
+    }
+</style>
+<script src="~/Areas/Security/NgCode/frmUserCreation.js"></script>
+<div ng-app="myApp" ng-controller="myCtrl">
+    <div class="form-horizontal" ng-form="frmUserCreation" novalidate>
+        <section class="content">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            <div class="form-group">
+                                <div class="col-md-5">
+                                    <h2 class="box-title">
+                                        <strong>{{FormTitle}}</strong>
+                                    </h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="text-right  m-t-10">
+                                        <button type="submit" class="btn btn-embossed btn-primary" ng-click="SaveData()" ng-class="{'btn-transparent': frmUserCreation.$invalid}" ng-disabled="frmUserCreation.$invalid"><i class="fa fa-save"></i>&nbsp{{btnSaveValue}}</button>
+                                        <button type="button" class="btn btn-embossed btn-danger" ng-click="Reset()"><i class="fa fa-refresh"></i>&nbsp Reset</button>
+                                        <button type="button" class="btn btn-embossed btn-success" ng-click="GetUserList()"><i class="fa fa-search"></i>&nbspSearch</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label required">User Name</label>
+                                        <ui-select class="form-control form-white " ng-model="frmUserCreation.Employee" theme="select2" required>
+                                            <ui-select-match placeholder="-- Please Select --">{{$select.selected.EmployeeName}}</ui-select-match>
+                                            <ui-select-choices repeat="employee in Employees | propsFilter: {EmployeeName: $select.search, EmployeeCode: $select.search, DesignationDetail: $select.search} | limitTo: 100">
+                                                <div ng-bind-html="employee.EmployeeName | highlight: $select.search"></div>
+                                                <small>
+                                                    <b>Employee Code: </b><span ng-bind-html="''+employee.EmployeeCode | highlight: $select.search"></span>  &nbsp;&nbsp;&nbsp;
+                                                    <b>Designation: </b><span ng-bind-html="''+employee.DesignationDetail | highlight: $select.search"></span>
+                                                    <br />
+                                                    <b>Posting Location: </b><span ng-bind-html="''+employee.PostingLocation | highlight: $select.search"></span>
+                                                </small>
+                                                <span ng-model="employee.PostingLocation" hidden></span>
+                                                <span ng-model="employee.DepotCode" hidden></span>
+                                            </ui-select-choices>
+                                        </ui-select>
+                                        <input type="hidden" ng-model="UserId" />
+                                        @*<select id="userName" name="userName" ng-model="userName" class="RequiredField form-control"></select>
+                    <input type="hidden" ng-model="UserId" />*@
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label required">Status</label>
+                                        <select id="status" name="status" ng-model="Status" class="form-control" required>
+                                            <option value="">-- Select --</option>
+                                            <option value="A">Active</option>
+                                            <option value="I">Inactive</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group" ng-class="{'has-error':frmUserCreation.Password.$error.minlength}">
+                                        <label class="control-label required">Password</label>
+                                        <input type="password" id="PasswordId"
+                                               name="Password" ng-model="Password" ng-minlength="1"
+                                               class="form-control required" placeholder="Enter Password..." required
+                                               ng-keyup="requiredMsg()" autocomplete="new-password">
+
+                                        @*<input type="password" id="PasswordId" autocomplete="new-password"
+                           name="Password" class="form-control" ng-model="Password"
+                            #Password="ngModel"
+                           ng-class="{ 'is-invalid': Password.touched && Password.invalid }"
+                           placeholder="Enter Password..." required ng-minlength="6" Password />
+
+                    <div ng-if="Password.touched && Password.invalid" class="invalid-feedback">
+                        <div ng-if="Password.errors.required">Password is required</div>
+                    </div>*@
+                                        <div ng-bind-html="myText1"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1"></div>
+                                <div class="col-md-5">
+                                    <div class="form-group" ng-class="{'has-error':frmUserCreation.conPassword.$error.minlength}">
+                                        <label class="control-label required">Confirm Password</label>
+                                        <input type="password" id="conPasswordId"
+                                               name="conPassword" ng-model="conPassword" ng-keyup="compare()" ng-minlength="1"
+                                               class="form-control required" placeholder="Enter Password..." required>
+                                        @*<input type="password" autocomplete="new-password" id="conPasswordId" class="form-control required"
+                           name="conPassword" ng-model="conPassword" ng-class="{ 'is-invalid': conPassword.touched && conPassword.invalid }" required conPassword
+                           #conPassword="ngModel" />
+                    <div ng-if="conPassword.touched && conPassword.invalid" class="invalid-feedback">
+                        <div ng-if="conPassword.errors.required">Confirm Password is required</div>
+                    </div>
+                    <div ng-if="conPassword.touched && Password!=conPassword"
+                         class="invalid-feedback">
+                        Passwords not matched
+                    </div>
+                    <div ng-if="conPassword.touched && Password==conPassword"
+                         class="invalid-feedback">
+                        Passwords is matched
+                    </div>*@
+                                        <div ng-bind-html="myText" ng-style="myStyle"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label required">Access Level</label>
+                                        <select id="accessLevel" name="accessLevel" ng-model="AccessLevel" class="form-control" required>
+                                            <option value="">-- Select --</option>
+                                            <option value="N">National</option>
+                                            <option value="Z">Zone</option>
+                                            <option value="R">Region</option>
+                                            <option value="D">Depot</option>
+                                            <option value="A">Area</option>
+                                            <option value="T">Teritory</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-1"></div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label class="control-label required">Group</label>
+                                        <select id="GroupCode" name="GroupCode" ng-model="GroupCode" class="form-control" required>
+                                            <option value="">-- Select --</option>
+                                            <option value="01">Human Division</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="modal fade" id="test">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">User List</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div id="gridUserCreation" ui-grid="gridUserCreationOptions" class="grid" style="height: 350px; width: 100%;" ui-grid-auto-resize ui-grid-resize-columns></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    @*<button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
